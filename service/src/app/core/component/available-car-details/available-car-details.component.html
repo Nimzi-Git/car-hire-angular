@@ -1,0 +1,20 @@
+<div class="container">
+ <app-filter [availableCars] ="availableCarDetails"
+             [allAvailableCars] = "allAvailableCarDetails"></app-filter>
+ <div *ngIf="availableCarDetails.length > 0" >
+   <app-car-list [availableCars] ="availableCarDetails"
+   [pageSelection] ="pageSelection.CAR_SELECTION_PAGE"></app-car-list>
+ </div>
+   <div class="emptyPage" *ngIf="availableCarDetails.length === 0 && selectedCars.length === 0">
+     <span class="emptyPageInstruction">
+      Oops!! You just missed our last car.   <br/>
+      Don't be worried, there will be your Dream Car very soon. Why not try me again after a cup of lovely Americano? 
+     </span>
+    </div>
+    <div class="emptyPage" *ngIf="availableCarDetails.length === 0 && selectedCars.length > 0">
+      <span class="emptyPageInstruction">
+       Oops!! We dont have any more car left at the moment.   <br/>
+       Why not try me again after a cup of lovely Americano? 
+      </span>
+     </div>
+</div>

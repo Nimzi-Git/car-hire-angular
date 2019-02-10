@@ -1,0 +1,4 @@
+export enum PageSelection {
+ CAR_SELECTION_PAGE = 'CAR_SELECTION_PAGE',
+ CAR_BOOKING_PAGE = 'CAR_BOOKING_PAGE'
+}

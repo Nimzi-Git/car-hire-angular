@@ -1,0 +1,17 @@
+<div class="booking-container">
+ <div class="selectedAllCars" *ngIf="selectedCars.length > 0">
+   <app-car-list [availableCars]="selectedCars" [pageSelection]="pageSelection.CAR_BOOKING_PAGE">
+    </app-car-list>
+    {{selectedCars.length}}
+ </div>
+ <div class="emptyPage" *ngIf="selectedCars.length === 0">
+  <span class="emptyPageInstruction">
+   Hey, You just missed one little Step!! I don't know your favourite car yet.   <br/>
+   Please go to Find A Car page and select your Dream Car. 
+  </span>
+ </div>
+</div>
+
+<div class="bookingButton" *ngIf="selectedCars.length > 0">
+  <button type="button" class="btn btn-primary" (click)="onClickBookCar()">Book Cars</button>
+</div>

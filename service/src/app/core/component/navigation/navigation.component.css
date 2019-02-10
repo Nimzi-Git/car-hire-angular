@@ -1,0 +1,21 @@
+.navbar-brand {
+ color: rgb(16, 97, 172);
+ margin: 0px;
+ padding: 10px;
+}
+
+.selectedCarInfo {
+ visibility: hidden;
+ position: relative;
+ left: -1530px;
+ top: -15px;
+ z-index: 2;
+}
+
+.show-badge {
+ visibility: visible;
+}
+
+.badge {
+ background-color: rgb(105, 216, 30);
+}

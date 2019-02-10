@@ -1,0 +1,38 @@
+<div class="container-confirmation">
+  <div class="emptyPage" *ngIf="bookedCars.length === 0">
+    <span class="emptyPageInstruction">
+      I am Sorry!!! Your booking is not yet confirmed. Have you already selected a car? <br />
+      Please check if you have pressed the Book button to complete the process. <br />
+      Please do not hesitate to give us a call at +44-XXXXXXXXXX2. <br />
+      We are open 24/7 at your service.
+    </span>
+  </div>
+  <div class="left-panel" *ngIf="bookedCars.length > 0">
+    <div class="left-panel-info">
+      <span>
+        A Big Thank you from Awsome Car Hire for selecting our service. <br />
+        Today you booked the below cars:
+      </span>
+    </div>
+    <div class="booked-car-list">
+      <ul *ngFor="let bookedCar of bookedCars">
+        <li>
+          {{bookedCar.brand}} {{bookedCar.name}} £ {{bookedCar.costPerDay}} per day
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="right-panel" *ngIf="bookedCars.length > 0">
+    <div class="confirmationIcon">
+      <img src="../../../../assets/icons/confirmation.png" alt="confirmationIcon">
+    </div>
+    <div class="rightPanel-text">
+      <span>
+        It is our pleasure to satisfy your needs. <br />
+        Hope to seee you soon. <br />
+        Please do not hesitate to give us a call at +44-XXXXXXXXXX2. <br />
+        We are open 24/7 at your service.
+      </span>
+    </div>
+  </div>
+</div>

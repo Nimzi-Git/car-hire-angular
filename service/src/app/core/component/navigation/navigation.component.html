@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/']">Awesome Car Hire</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/rent-a-car','find-a-car']" routerLinkActive="router-link-active">Find A
+          Car</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/rent-a-car','book-cars']" routerLinkActive="router-link-active" (click)="resetFilter()">Book
+          Cars</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/rent-a-car','confirmation']" routerLinkActive="router-link-active" (click)="resetFilter()">Confirm</a>
+      </li>
+    </ul>
+    <div class="selectedCarInfo" [ngClass]="{'show-badge': selectedCarDetails.length > 0}">
+      <span class="badge badge-info" *ngIf="selectedCarDetails.length === 1">{{selectedCarDetails.length}} Car</span>
+      <span class="badge badge-info" *ngIf="selectedCarDetails.length > 1">{{selectedCarDetails.length}} Cars</span>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

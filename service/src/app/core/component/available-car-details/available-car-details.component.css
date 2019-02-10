@@ -1,0 +1,32 @@
+.container {
+ display: flex;
+ height: calc(100vh - 65.6px);
+ max-height: calc(100vh - 80px);
+
+ max-width: 100%;
+ padding: 0px;
+ margin: 0px;
+ overflow: hidden;
+}
+.container app-filter {
+ justify-content: flex-start;
+}
+app-car-list {
+ justify-content: flex-end;
+}
+.emptyPage {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 100%;
+}
+
+.emptyPageInstruction {
+ display: block;
+ position: relative;
+ top: 0vh;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ font-size: 30px;
+ text-align: center;
+ }

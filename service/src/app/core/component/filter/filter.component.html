@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="container-heading">Find Your Car</div>
+
+  <div class="container-body">
+    <div class="form-group">
+      <label for="carClass">Car Class</label>
+      <select [ngModel]="selectedVehicleType" (ngModelChange)="onVehicleTypeChange($event)" class="form-control" id="carClass">
+        <option *ngFor="let vehicleType of availableVehicleTypes" [value]='vehicleType'>{{vehicleType}}</option>
+      </select>
+    </div>
+
+    <div class="form-group ">
+      <label for="example-number-input" class="col-form-label">Minimum Passengers</label>
+      <input class="form-control" type="number" [max]="maxCarPassenger" [min]=0 id="minCarPassenger" [ngModel]="selectedPassengerCount"
+        (ngModelChange)="onSelectionPassenger($event)" placeholder="0">
+    </div>
+    <div class="form-group ">
+      <label for="example-number-input" class="col-form-label">Minimum Wheels</label>
+      <input class="form-control" type="number" [max]="maxWheelCount" [min]=0 id="minCarWheels" [ngModel]="selectedWheelCount"
+        (ngModelChange)="onSelectionWheel($event)" placeholder="0">
+    </div>
+    <div class="form-group ">
+      <label for="example-number-input" class="col-form-label">Minimum Costs Per Day</label>
+      <input class="form-control" type="number" [max]="maxCostPday" [min]=0 id="minCostPday" [ngModel]="selectedCostPerDay"
+        (ngModelChange)="onSelectionCost($event)" placeholder="0">
+    </div>
+  </div>
+</div>

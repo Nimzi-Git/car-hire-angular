@@ -1,0 +1,14 @@
+.home-img {
+  width: 100vw;
+  height: calc(100vh - 70px);
+}
+
+.intro-text {
+  position: absolute;
+  top: 400px;
+  font-size: 45px;
+  font-family: monospace;
+  text-align: center;
+  font-style: italic;
+  color: rgb(4, 99, 116);
+}
