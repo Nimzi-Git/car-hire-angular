@@ -22,4 +22,4 @@ n.b.: This is only the FE application and there is no BE implementation. The sel
 
 ## Browser Support
 
-To get the best view of the application, please use Chrome V 71 and with 80% page zoom. Not considered for the mobile for the moment.
+To get the best view of the application, please use Chrome V 71 and with 80% page zoom. Not considered for the mobile for the moment. More work required in styling of the page.
